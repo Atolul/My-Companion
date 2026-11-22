@@ -14,6 +14,7 @@ def create_writer_room(window, go_library, go_writer, go_study, go_farm, go_bed)
     bed_image= PhotoImage(file="assets/bed.png")
     farm_image= PhotoImage(file="assets/farm.png")
     library_image= PhotoImage(file="assets/library.png")
+    bg_image = PhotoImage(file="assets/writer_room.png")
 
     room = Frame(window, bg="#b0c0bf")
 

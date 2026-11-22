@@ -47,14 +47,17 @@ def create_bedroom(window, go_library, go_writer, go_study, go_farm, go_bed):
         ]
 
     wakeup_frames = [
-        PhotoImage(file="assets/wake1.png").zoom(4, 4),
         PhotoImage(file="assets/wake2.png").zoom(4, 4),
+        PhotoImage(file="assets/wake2.png").zoom(4, 4),
+        PhotoImage(file="assets/wake2.png").zoom(4, 4),
+        PhotoImage(file="assets/wake1.png").zoom(4, 4),
+        PhotoImage(file="assets/wake1.png").zoom(4, 4),
     ]
 
     def clicked(event):
-        sprite.change_animation(wakeup_frames, new_loop=False, return_to_original=True)
+        change_animation(wakeup_frames, new_loop=False, new_speed=700, return_to_original=True)
 
-    sprite, play_run, sprite.change_animation, sprite.bind_animation = create_animation(room, run_frames, x=300, y=300, speed=250, loop=True, on_click=clicked)
+    sprite, play_run, change_animation, bind_animation = create_animation(room, run_frames, x=300, y=300, speed=250, loop=True, on_click=clicked)
 
     play_run()
 
