@@ -5,6 +5,7 @@ from widgets.menu_button import create_menu
 from widgets.popup_window import create_popup
 from widgets.customizer import bg_color
 from data.data import load_data, save_data
+from widgets.background import create_background
 
 def create_writer_room(window, go_library, go_writer, go_study, go_farm, go_bed):
 
@@ -14,9 +15,10 @@ def create_writer_room(window, go_library, go_writer, go_study, go_farm, go_bed)
     bed_image= PhotoImage(file="assets/bed.png")
     farm_image= PhotoImage(file="assets/farm.png")
     library_image= PhotoImage(file="assets/library.png")
-    bg_image = PhotoImage(file="assets/writer_room.png")
 
-    room = Frame(window, bg="#b0c0bf")
+    room = tk.Frame(window, bg="#b0c0bf")
+
+    create_background(room, "assets/writer_room.png")
 
     menu_option = create_menu(room)
 
