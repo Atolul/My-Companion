@@ -5,7 +5,9 @@ def create_animation(parent, frames, x=0, y=0, speed=100, loop=True, on_click=No
     sprite= tk.Label(
         parent, 
         image=frames[0],
-        bg=parent.cget("bg")
+        bg=parent.cget("bg"),
+        bd=0,
+        highlightthickness=0
     )
 
     sprite.place(relx=0.5, rely=0.5, anchor="center")

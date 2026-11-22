@@ -1,5 +1,7 @@
 from tkinter import *
+import tkinter as tk
 from widgets.button import create_image_button
+from widgets.background import create_background
 
 def create_library(window, go_library, go_writer, go_study, go_farm, go_bed):
     writer_image= PhotoImage(file="assets/writer.png")
@@ -8,7 +10,9 @@ def create_library(window, go_library, go_writer, go_study, go_farm, go_bed):
     farm_image= PhotoImage(file="assets/farm.png")
     library_image= PhotoImage(file="assets/library.png")
 
-    room = Frame(window, bg="#b0c0bf")
+    room = tk.Frame(window, bg="#b0c0bf")
+    
+    create_background(room, "assets/library_room.png")
 
     button_frame = Frame(room, bg="#b0c0bf")
     button_frame.pack(anchor="ne", padx=10, pady=10)
